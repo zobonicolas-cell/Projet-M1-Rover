@@ -48,6 +48,11 @@
           }
         }
       }
+    },
+    "contexte_rover": {
+      "iv": {
+        "hiddenElements": []
+      }
     }
   }
 }
