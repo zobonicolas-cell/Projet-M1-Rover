@@ -1,0 +1,227 @@
+{
+  "version": 9,
+  "structuredDefaults": "inherited",
+  "anchors": {
+    "ProjetRovLibre": {
+      "gv": {
+        "gvViews": {
+          "group": {
+            "layout": {
+              "ProjetRovExploration::rovLibre": {
+                "x": 21,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 86
+              },
+              "ProjetRovLibre::elements": {
+                "x": 8,
+                "y": 142,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 284
+              },
+              "ProjetRovLibre::Contexte": {
+                "x": 24,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 156
+              }
+            },
+            "ports": {},
+            "edgeRoutes": {},
+            "edgeAnchors": {},
+            "edgeGeometry": {
+              "definedBy:ProjetRovExploration::rovLibre->ProjetRovExploration::RoverExploration": {
+                "sourceHandle": "bottom",
+                "targetHandle": "top",
+                "path": "M 73,94L 73,142",
+                "lineStyle": "straight",
+                "sourcePoint": {
+                  "x": 73,
+                  "y": 94
+                },
+                "targetPoint": {
+                  "x": 73,
+                  "y": 142
+                },
+                "label": {
+                  "x": 73,
+                  "y": 118
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ProjetRovExploration": {
+      "gv": {
+        "gvViews": {
+          "group": {
+            "expandedElements": [
+              "ProjetRovExploration::RoverExploration",
+              "ProjetRovExploration::rovLibre"
+            ],
+            "layout": {
+              "ProjetRovLibre::Contexte": {
+                "x": 24,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 156
+              },
+              "ProjetRovExploration::rovLibre": {
+                "x": 215.01172051333089,
+                "y": -186.01172051333089,
+                "parentKey": null,
+                "w": 160,
+                "h": 270,
+                "collapsedW": 104,
+                "collapsedH": 86
+              },
+              "ProjetRovExploration::RoverExploration": {
+                "x": 8,
+                "y": 294,
+                "parentKey": null,
+                "w": 215,
+                "h": 1150,
+                "collapsedW": 130,
+                "collapsedH": 284
+              },
+              "ProjetRovExploration::RoverExploration::autonomie": {
+                "x": 22,
+                "y": 50,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 88
+              },
+              "ProjetRovExploration::RoverExploration::vitesse": {
+                "x": 22,
+                "y": 160,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 88
+              },
+              "ProjetRovExploration::RoverExploration::camera": {
+                "x": 22,
+                "y": 270,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::capteurs": {
+                "x": 22,
+                "y": 350,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::communication": {
+                "x": 22,
+                "y": 430,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 109,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::deplacement": {
+                "x": 22,
+                "y": 510,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::navigationAutonome": {
+                "x": 22,
+                "y": 590,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::observation": {
+                "x": 22,
+                "y": 670,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::analyseDonnees": {
+                "x": 22,
+                "y": 750,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::transmissionDonnees": {
+                "x": 22,
+                "y": 830,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 150,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::protection": {
+                "x": 22,
+                "y": 910,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::autoDegagement": {
+                "x": 22,
+                "y": 990,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::RoverExploration::autoRedressement": {
+                "x": 22,
+                "y": 1070,
+                "parentKey": "ProjetRovExploration::RoverExploration",
+                "collapsedW": 130,
+                "collapsedH": 58
+              },
+              "ProjetRovExploration::rovLibre::autonomie": {
+                "x": 22,
+                "y": 50,
+                "parentKey": "ProjetRovExploration::rovLibre",
+                "collapsedW": 104,
+                "collapsedH": 88
+              },
+              "ProjetRovExploration::rovLibre::vitesse": {
+                "x": 22,
+                "y": 160,
+                "parentKey": "ProjetRovExploration::rovLibre",
+                "collapsedW": 104,
+                "collapsedH": 88
+              }
+            },
+            "ports": {},
+            "edgeRoutes": {},
+            "edgeAnchors": {},
+            "edgeGeometry": {
+              "definedBy:ProjetRovExploration::rovLibre->ProjetRovExploration::RoverExploration": {
+                "sourceHandle": "bottom:0.667",
+                "targetHandle": "top:0.375",
+                "path": "M 321.73172051333086,83.98827948666911L 88.625,294",
+                "lineStyle": "straight",
+                "sourcePoint": {
+                  "x": 321.73172051333086,
+                  "y": 83.98827948666911
+                },
+                "targetPoint": {
+                  "x": 88.625,
+                  "y": 294
+                },
+                "label": {
+                  "x": 205.17836025666543,
+                  "y": 188.99413974333456
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
