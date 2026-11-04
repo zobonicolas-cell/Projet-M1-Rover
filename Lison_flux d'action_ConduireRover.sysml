@@ -3,30 +3,44 @@ package flux_ROVLibre {
     private import contexte_ROVLibre::definitions::*;
     private import ScalarValues::Boolean;
 
-    action def FluxAdapterImmersion {
-        attribute terreDetectee : Boolean;
+    action def FluxConduireRover {
+        in item commande : Commande;
+        out item etat : EtatSysteme;
 
-        action detecterImmersion;
-        action activerFlottabilite;
-        action alerterTelepilote;
-        action naviguerEnSurface;
-        action revenirModeTerrestre;
+        attribute obstacleBloquant : Boolean;
+        attribute missionContinue : Boolean;
+
+        action recevoirCommande;
+        action analyserTerrain;
+        action arreterRover;
+        action piloterMoteurs;
+        action transmettreEtat;
+        action fin;
 
         merge boucle;
-        decide testTerre;
+        decide testObstacle;
+        merge suite;
+        decide testFin;
 
         first start;
-        then detecterImmersion;
-        first detecterImmersion then activerFlottabilite;
-        first activerFlottabilite then alerterTelepilote;
-        first alerterTelepilote then boucle;
+        then boucle;
 
-        first boucle then naviguerEnSurface;
-        first naviguerEnSurface then testTerre;
+        first boucle then recevoirCommande;
+        first recevoirCommande then analyserTerrain;
+        first analyserTerrain then testObstacle;
 
-        first testTerre if terreDetectee then revenirModeTerrestre;
-        first testTerre if not terreDetectee then boucle;
+        first testObstacle if obstacleBloquant then arreterRover;
+        first testObstacle if not obstacleBloquant then piloterMoteurs;
 
-        first revenirModeTerrestre then done;
+        first arreterRover then suite;
+        first piloterMoteurs then suite;
+
+        first suite then transmettreEtat;
+        first transmettreEtat then testFin;
+
+        first testFin if missionContinue then boucle;
+        first testFin if not missionContinue then fin;
+
+        first fin then done;
     }
 }
