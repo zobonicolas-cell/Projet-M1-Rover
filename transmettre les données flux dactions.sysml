@@ -20,5 +20,6 @@ package flux_actions_TransmettreDonnees {
         then compilerEtChiffrerDonnees;
         then emettreSignalRadio;
         then verifierIntegriteTransmission;
+        succession acquerirFluxVideo then releverCapteursTelemetriques;
     }
 }

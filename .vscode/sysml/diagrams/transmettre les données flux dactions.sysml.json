@@ -1,0 +1,140 @@
+{
+  "version": 9,
+  "structuredDefaults": "inherited",
+  "anchors": {
+    "flux_actions_TransmettreDonnees": {
+      "afv": {
+        "layout": {
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees": {
+            "x": 22,
+            "y": 22,
+            "parentKey": null,
+            "w": 324,
+            "h": 814
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::acquerirFluxVideo": {
+            "x": 46,
+            "y": 38,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::releverCapteursTelemetriques": {
+            "x": 25,
+            "y": 178,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 211,
+            "h": 58
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::compilerEtChiffrerDonnees": {
+            "x": 35,
+            "y": 318,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 191,
+            "h": 58
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::emettreSignalRadio": {
+            "x": 46.5,
+            "y": 458,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 168,
+            "h": 58
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::verifierIntegriteTransmission": {
+            "x": 22,
+            "y": 598,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 218,
+            "h": 58
+          },
+          "flux_actions_TransmettreDonnees::FluxTransmettreDonnees::#DocCommentMember:1": {
+            "x": 22,
+            "y": 738,
+            "parentKey": "flux_actions_TransmettreDonnees::FluxTransmettreDonnees",
+            "w": 280,
+            "h": 54
+          }
+        },
+        "ports": {},
+        "edgeRoutes": {},
+        "edgeAnchors": {"succession:flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::acquerirFluxVideo->flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::releverCapteursTelemetriques":{"sourceHandle":"bottom","targetHandle":"top"}},
+        "edgeGeometry": {
+          "succession:flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::releverCapteursTelemetriques->flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::compilerEtChiffrerDonnees": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 152.5,258L 152.5,340",
+            "lineStyle": "straight",
+            "sourcePoint": {
+              "x": 152.5,
+              "y": 258
+            },
+            "targetPoint": {
+              "x": 152.5,
+              "y": 340
+            },
+            "label": {
+              "x": 152.5,
+              "y": 299
+            }
+          },
+          "succession:flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::compilerEtChiffrerDonnees->flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::emettreSignalRadio": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 152.5,398L 152.5,480",
+            "lineStyle": "straight",
+            "sourcePoint": {
+              "x": 152.5,
+              "y": 398
+            },
+            "targetPoint": {
+              "x": 152.5,
+              "y": 480
+            },
+            "label": {
+              "x": 152.5,
+              "y": 439
+            }
+          },
+          "succession:flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::emettreSignalRadio->flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::verifierIntegriteTransmission": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 152.5,538L 153,620",
+            "lineStyle": "straight",
+            "sourcePoint": {
+              "x": 152.5,
+              "y": 538
+            },
+            "targetPoint": {
+              "x": 153,
+              "y": 620
+            },
+            "label": {
+              "x": 152.75,
+              "y": 579
+            }
+          },
+          "succession:flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::acquerirFluxVideo->flux_actions_TransmettreDonnees::FluxTransmettreDonnees/flux_actions_TransmettreDonnees::FluxTransmettreDonnees::releverCapteursTelemetriques": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 152,118L 152.5,200",
+            "lineStyle": "straight",
+            "sourcePoint": {
+              "x": 152,
+              "y": 118
+            },
+            "targetPoint": {
+              "x": 152.5,
+              "y": 200
+            },
+            "label": {
+              "x": 152.25,
+              "y": 159
+            }
+          }
+        },
+        "lineStyle": "straight"
+      }
+    }
+  }
+}
