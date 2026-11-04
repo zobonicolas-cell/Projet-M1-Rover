@@ -1,0 +1,1346 @@
+{
+  "version": 9,
+  "structuredDefaults": "inherited",
+  "anchors": {
+    "flux_RecupererRover": {
+      "afv": {
+        "layout": {
+          "flux_RecupererRover::FluxRecupererRover": {
+            "x": 149,
+            "y": 22,
+            "parentKey": null,
+            "w": 1050,
+            "h": 2288
+          },
+          "flux_RecupererRover::FluxRecupererRover/__initial__": {
+            "x": 341.2366848545657,
+            "y": 30.448077422266167,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 12,
+            "h": 12,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::declarerFinMission": {
+            "x": 263.2366848545657,
+            "y": 83.20296180541212,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierLiaison": {
+            "x": 29.25,
+            "y": 368,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::transmettreDonneesRadio": {
+            "x": 22,
+            "y": 636,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 177,
+            "h": 58
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::stockerDonneesLocalement": {
+            "x": 257,
+            "y": 636,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 184,
+            "h": 58
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierIntegriteDonnees": {
+            "x": 257,
+            "y": 1007,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 184,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::evaluerAccessibilite": {
+            "x": 473,
+            "y": 367,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::lancerRetour": {
+            "x": 475,
+            "y": 584,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::avancerVersPointRecuperation": {
+            "x": 456,
+            "y": 905,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 211,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::immobiliserRover": {
+            "x": 479,
+            "y": 1149,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::securiserRover": {
+            "x": 480,
+            "y": 1280,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::recupererPhysiquement": {
+            "x": 480,
+            "y": 1420,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::enregistrerDernierePosition": {
+            "x": 721,
+            "y": 582.25,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 205,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::signalerRoverAbandonne": {
+            "x": 738,
+            "y": 909,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 171,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::redigerCompteRendu": {
+            "x": 349.5940763891757,
+            "y": 1830,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::fin": {
+            "x": 349.5940763891757,
+            "y": 1978.132839699098,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 168,
+            "h": 58,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::forkFin": {
+            "x": 232,
+            "y": 272,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 231,
+            "h": 12,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::joinFin": {
+            "x": 288,
+            "y": 1736,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 290,
+            "h": 12,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testLiaison": {
+            "x": 47,
+            "y": 481,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 132,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::sauvegardeFaite": {
+            "x": 263,
+            "y": 762,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 172,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testAccessible": {
+            "x": 477,
+            "y": 477.5,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 162,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::boucleRetour": {
+            "x": 490,
+            "y": 773,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 142,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testArrivee": {
+            "x": 496,
+            "y": 1014,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 132,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::finRecuperation": {
+            "x": 478,
+            "y": 1522,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 172,
+            "h": 48,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover/__final__": {
+            "x": 425.5940763891758,
+            "y": 2128.5893478836524,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 16,
+            "h": 16,
+            "placedByHand": true
+          },
+          "flux_RecupererRover::FluxRecupererRover::liaisonActive": {
+            "x": 22,
+            "y": 2208,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 177,
+            "h": 58
+          },
+          "flux_RecupererRover::FluxRecupererRover::roverAccessible": {
+            "x": 223,
+            "y": 2208,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 191,
+            "h": 58
+          },
+          "flux_RecupererRover::FluxRecupererRover::pointAtteint": {
+            "x": 438,
+            "y": 2208,
+            "parentKey": "flux_RecupererRover::FluxRecupererRover",
+            "w": 171,
+            "h": 58
+          }
+        },
+        "ports": {
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover.ordreFinMission": {
+            "side": "left",
+            "offset": 0.62
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover.donneesSauvegardees": {
+            "side": "right",
+            "offset": 0.34
+          },
+          "flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover.etat": {
+            "side": "right",
+            "offset": 0.92
+          }
+        },
+        "edgeRoutes": {},
+        "edgeAnchors": {},
+        "edgeGeometry": {
+          "succession:flux_RecupererRover::FluxRecupererRover/__initial__->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::declarerFinMission": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 496.237,64.448 L 496.237,105.203",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 496.2366848545657,
+              "y": 64.44807742226617
+            },
+            "targetPoint": {
+              "x": 496.2366848545657,
+              "y": 105.20296180541212
+            },
+            "label": {
+              "x": 496.2366848545657,
+              "y": 84.82551961383913
+            },
+            "points": [
+              {
+                "x": 496.2366848545657,
+                "y": 64.44807742226617
+              },
+              {
+                "x": 496.2366848545657,
+                "y": 105.20296180541212
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::declarerFinMission->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::forkFin": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 496.237,163.203 L 496.237,275.868 Q 496.237,276 496.368,276 L 496.368,276 Q 496.5,276 496.5,276.132 L 496.5,294",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 496.2366848545657,
+              "y": 163.20296180541212
+            },
+            "targetPoint": {
+              "x": 496.5,
+              "y": 294
+            },
+            "label": {
+              "x": 496.2366848545657,
+              "y": 228.73313847542323
+            },
+            "points": [
+              {
+                "x": 496.2366848545657,
+                "y": 163.20296180541212
+              },
+              {
+                "x": 496.2366848545657,
+                "y": 276
+              },
+              {
+                "x": 496.5,
+                "y": 276
+              },
+              {
+                "x": 496.5,
+                "y": 294
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::forkFin->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierLiaison": {
+            "sourceHandle": "bottom:0.375",
+            "targetHandle": "top",
+            "path": "M 467.625,306 L 467.625,364 Q 467.625,372 459.625,372 L 270.25,372 Q 262.25,372 262.25,380 L 262.25,390",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 467.625,
+              "y": 306
+            },
+            "targetPoint": {
+              "x": 262.25,
+              "y": 390
+            },
+            "label": {
+              "x": 388.9375,
+              "y": 372
+            },
+            "points": [
+              {
+                "x": 467.625,
+                "y": 306
+              },
+              {
+                "x": 467.625,
+                "y": 372
+              },
+              {
+                "x": 262.25,
+                "y": 372
+              },
+              {
+                "x": 262.25,
+                "y": 390
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierLiaison->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testLiaison": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 262.25,448 L 262.25,484.875 Q 262.25,485 262.125,485 L 262.125,485 Q 262,485 262,485.125 L 262,503",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 262.25,
+              "y": 448
+            },
+            "targetPoint": {
+              "x": 262,
+              "y": 503
+            },
+            "label": {
+              "x": 262.25,
+              "y": 475.625
+            },
+            "points": [
+              {
+                "x": 262.25,
+                "y": 448
+              },
+              {
+                "x": 262.25,
+                "y": 485
+              },
+              {
+                "x": 262,
+                "y": 485
+              },
+              {
+                "x": 262,
+                "y": 503
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testLiaison->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::transmettreDonneesRadio:[liaisonActive]": {
+            "caption": {
+              "x": 161.05,
+              "y": 560,
+              "width": 113,
+              "height": 18,
+              "lines": [
+                "[liaisonActive]"
+              ],
+              "text": "[liaisonActive]",
+              "source": {
+                "x": 196,
+                "y": 527
+              },
+              "target": {
+                "x": 259.5,
+                "y": 658
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 1
+            },
+            "sourceHandle": "left",
+            "targetHandle": "top",
+            "path": "M 196,527 L 186,527 Q 178,527 178,535 L 178,632 Q 178,640 186,640 L 251.5,640 Q 259.5,640 259.5,648 L 259.5,658",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 196,
+              "y": 527
+            },
+            "targetPoint": {
+              "x": 259.5,
+              "y": 658
+            },
+            "label": {
+              "x": 178,
+              "y": 624.25
+            },
+            "points": [
+              {
+                "x": 196,
+                "y": 527
+              },
+              {
+                "x": 178,
+                "y": 527
+              },
+              {
+                "x": 178,
+                "y": 640
+              },
+              {
+                "x": 259.5,
+                "y": 640
+              },
+              {
+                "x": 259.5,
+                "y": 658
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testLiaison->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::stockerDonneesLocalement:[not liaisonActive]": {
+            "caption": {
+              "x": 193,
+              "y": 584,
+              "width": 138,
+              "height": 18,
+              "lines": [
+                "[not liaisonActive]"
+              ],
+              "text": "[not liaisonActive]",
+              "source": {
+                "x": 262,
+                "y": 551
+              },
+              "target": {
+                "x": 498,
+                "y": 658
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 0
+            },
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 262,551 L 262,632 Q 262,640 270,640 L 490,640 Q 498,640 498,648 L 498,658",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 262,
+              "y": 551
+            },
+            "targetPoint": {
+              "x": 498,
+              "y": 658
+            },
+            "label": {
+              "x": 344.5,
+              "y": 640
+            },
+            "points": [
+              {
+                "x": 262,
+                "y": 551
+              },
+              {
+                "x": 262,
+                "y": 640
+              },
+              {
+                "x": 498,
+                "y": 640
+              },
+              {
+                "x": 498,
+                "y": 658
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::transmettreDonneesRadio->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::sauvegardeFaite": {
+            "sourceHandle": "bottom",
+            "targetHandle": "left",
+            "path": "M 259.5,716 L 259.5,800 Q 259.5,808 267.5,808 L 412,808",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 259.5,
+              "y": 716
+            },
+            "targetPoint": {
+              "x": 412,
+              "y": 808
+            },
+            "label": {
+              "x": 289.75,
+              "y": 808
+            },
+            "points": [
+              {
+                "x": 259.5,
+                "y": 716
+              },
+              {
+                "x": 259.5,
+                "y": 808
+              },
+              {
+                "x": 412,
+                "y": 808
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::stockerDonneesLocalement->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::sauvegardeFaite": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 498,716 L 498,784",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 498,
+              "y": 716
+            },
+            "targetPoint": {
+              "x": 498,
+              "y": 784
+            },
+            "label": {
+              "x": 498,
+              "y": 750
+            },
+            "points": [
+              {
+                "x": 498,
+                "y": 716
+              },
+              {
+                "x": 498,
+                "y": 784
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::sauvegardeFaite->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierIntegriteDonnees": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 498,832 L 498,1029",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 498,
+              "y": 832
+            },
+            "targetPoint": {
+              "x": 498,
+              "y": 1029
+            },
+            "label": {
+              "x": 498,
+              "y": 930.5
+            },
+            "points": [
+              {
+                "x": 498,
+                "y": 832
+              },
+              {
+                "x": 498,
+                "y": 1029
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::verifierIntegriteDonnees->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::joinFin": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top:0.300",
+            "path": "M 498,1087 L 498,1732 Q 498,1740 506,1740 L 516,1740 Q 524,1740 524,1748 L 524,1758",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 498,
+              "y": 1087
+            },
+            "targetPoint": {
+              "x": 524,
+              "y": 1758
+            },
+            "label": {
+              "x": 498,
+              "y": 1435.5
+            },
+            "points": [
+              {
+                "x": 498,
+                "y": 1087
+              },
+              {
+                "x": 498,
+                "y": 1740
+              },
+              {
+                "x": 524,
+                "y": 1740
+              },
+              {
+                "x": 524,
+                "y": 1758
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::forkFin->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::evaluerAccessibilite": {
+            "sourceHandle": "bottom:0.625",
+            "targetHandle": "top",
+            "path": "M 525.375,306 L 525.375,363 Q 525.375,371 533.375,371 L 698,371 Q 706,371 706,379 L 706,389",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 525.375,
+              "y": 306
+            },
+            "targetPoint": {
+              "x": 706,
+              "y": 389
+            },
+            "label": {
+              "x": 592.1875,
+              "y": 371
+            },
+            "points": [
+              {
+                "x": 525.375,
+                "y": 306
+              },
+              {
+                "x": 525.375,
+                "y": 371
+              },
+              {
+                "x": 706,
+                "y": 371
+              },
+              {
+                "x": 706,
+                "y": 389
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::evaluerAccessibilite->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testAccessible": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 706,447 L 706,481 Q 706,481.5 706.5,481.5 L 706.5,481.5 Q 707,481.5 707,482 L 707,499.5",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 706,
+              "y": 447
+            },
+            "targetPoint": {
+              "x": 707,
+              "y": 499.5
+            },
+            "label": {
+              "x": 706,
+              "y": 473.75
+            },
+            "points": [
+              {
+                "x": 706,
+                "y": 447
+              },
+              {
+                "x": 706,
+                "y": 481.5
+              },
+              {
+                "x": 707,
+                "y": 481.5
+              },
+              {
+                "x": 707,
+                "y": 499.5
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testAccessible->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::lancerRetour:[roverAccessible]": {
+            "caption": {
+              "x": 644,
+              "y": 560.5,
+              "width": 126,
+              "height": 18,
+              "lines": [
+                "[roverAccessible]"
+              ],
+              "text": "[roverAccessible]",
+              "source": {
+                "x": 707,
+                "y": 547.5
+              },
+              "target": {
+                "x": 708,
+                "y": 606
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 0
+            },
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 707,547.5 L 707,587.5 Q 707,588 707.5,588 L 707.5,588 Q 708,588 708,588.5 L 708,606",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 707,
+              "y": 547.5
+            },
+            "targetPoint": {
+              "x": 708,
+              "y": 606
+            },
+            "label": {
+              "x": 707,
+              "y": 577.25
+            },
+            "points": [
+              {
+                "x": 707,
+                "y": 547.5
+              },
+              {
+                "x": 707,
+                "y": 588
+              },
+              {
+                "x": 708,
+                "y": 588
+              },
+              {
+                "x": 708,
+                "y": 606
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testAccessible->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::enregistrerDernierePosition:[not roverAccessible]": {
+            "caption": {
+              "x": 789.3,
+              "y": 514.5,
+              "width": 151,
+              "height": 18,
+              "lines": [
+                "[not roverAccessible]"
+              ],
+              "text": "[not roverAccessible]",
+              "source": {
+                "x": 788,
+                "y": 523.5
+              },
+              "target": {
+                "x": 972.5,
+                "y": 604.25
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 0
+            },
+            "sourceHandle": "right",
+            "targetHandle": "top",
+            "path": "M 788,523.5 L 964.5,523.5 Q 972.5,523.5 972.5,531.5 L 972.5,604.25",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 788,
+              "y": 523.5
+            },
+            "targetPoint": {
+              "x": 972.5,
+              "y": 604.25
+            },
+            "label": {
+              "x": 920.625,
+              "y": 523.5
+            },
+            "points": [
+              {
+                "x": 788,
+                "y": 523.5
+              },
+              {
+                "x": 972.5,
+                "y": 523.5
+              },
+              {
+                "x": 972.5,
+                "y": 604.25
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::lancerRetour->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::boucleRetour": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 708,664 L 708,776 Q 708,777 709,777 L 709,777 Q 710,777 710,778 L 710,795",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 708,
+              "y": 664
+            },
+            "targetPoint": {
+              "x": 710,
+              "y": 795
+            },
+            "label": {
+              "x": 708,
+              "y": 730.5
+            },
+            "points": [
+              {
+                "x": 708,
+                "y": 664
+              },
+              {
+                "x": 708,
+                "y": 777
+              },
+              {
+                "x": 710,
+                "y": 777
+              },
+              {
+                "x": 710,
+                "y": 795
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::boucleRetour->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::avancerVersPointRecuperation": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 710,843 L 710,908.75 Q 710,909 710.25,909 L 710.25,909 Q 710.5,909 710.5,909.25 L 710.5,927",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 710,
+              "y": 843
+            },
+            "targetPoint": {
+              "x": 710.5,
+              "y": 927
+            },
+            "label": {
+              "x": 710,
+              "y": 885.25
+            },
+            "points": [
+              {
+                "x": 710,
+                "y": 843
+              },
+              {
+                "x": 710,
+                "y": 909
+              },
+              {
+                "x": 710.5,
+                "y": 909
+              },
+              {
+                "x": 710.5,
+                "y": 927
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::avancerVersPointRecuperation->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testArrivee": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 710.5,985 L 710.5,1017.75 Q 710.5,1018 710.75,1018 L 710.75,1018 Q 711,1018 711,1018.25 L 711,1036",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 710.5,
+              "y": 985
+            },
+            "targetPoint": {
+              "x": 711,
+              "y": 1036
+            },
+            "label": {
+              "x": 710.5,
+              "y": 1010.75
+            },
+            "points": [
+              {
+                "x": 710.5,
+                "y": 985
+              },
+              {
+                "x": 710.5,
+                "y": 1018
+              },
+              {
+                "x": 711,
+                "y": 1018
+              },
+              {
+                "x": 711,
+                "y": 1036
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testArrivee->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::immobiliserRover:[pointAtteint]": {
+            "caption": {
+              "x": 657.5,
+              "y": 1097,
+              "width": 107,
+              "height": 18,
+              "lines": [
+                "[pointAtteint]"
+              ],
+              "text": "[pointAtteint]",
+              "source": {
+                "x": 711,
+                "y": 1084
+              },
+              "target": {
+                "x": 712,
+                "y": 1171
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 0
+            },
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 711,1084 L 711,1152.5 Q 711,1153 711.5,1153 L 711.5,1153 Q 712,1153 712,1153.5 L 712,1171",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 711,
+              "y": 1084
+            },
+            "targetPoint": {
+              "x": 712,
+              "y": 1171
+            },
+            "label": {
+              "x": 711,
+              "y": 1128
+            },
+            "points": [
+              {
+                "x": 711,
+                "y": 1084
+              },
+              {
+                "x": 711,
+                "y": 1153
+              },
+              {
+                "x": 712,
+                "y": 1153
+              },
+              {
+                "x": 712,
+                "y": 1171
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::testArrivee->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::boucleRetour:[not pointAtteint]": {
+            "caption": {
+              "x": 778.2777777777777,
+              "y": 1050.9444444444443,
+              "width": 132,
+              "height": 18,
+              "lines": [
+                "[not pointAtteint]"
+              ],
+              "text": "[not pointAtteint]",
+              "source": {
+                "x": 777,
+                "y": 1060
+              },
+              "target": {
+                "x": 781,
+                "y": 819
+              },
+              "lineStyle": "orthogonal",
+              "conflicts": 0,
+              "crossings": 0
+            },
+            "sourceHandle": "right",
+            "targetHandle": "right",
+            "path": "M 777,1060 L 843,1060 Q 851,1060 851,1052 L 851,827 Q 851,819 843,819 L 781,819",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 777,
+              "y": 1060
+            },
+            "targetPoint": {
+              "x": 781,
+              "y": 819
+            },
+            "label": {
+              "x": 851,
+              "y": 941.5
+            },
+            "points": [
+              {
+                "x": 777,
+                "y": 1060
+              },
+              {
+                "x": 851,
+                "y": 1060
+              },
+              {
+                "x": 851,
+                "y": 819
+              },
+              {
+                "x": 781,
+                "y": 819
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::immobiliserRover->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::securiserRover": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 712,1229 L 712,1283.5 Q 712,1284 712.5,1284 L 712.5,1284 Q 713,1284 713,1284.5 L 713,1302",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 712,
+              "y": 1229
+            },
+            "targetPoint": {
+              "x": 713,
+              "y": 1302
+            },
+            "label": {
+              "x": 712,
+              "y": 1266
+            },
+            "points": [
+              {
+                "x": 712,
+                "y": 1229
+              },
+              {
+                "x": 712,
+                "y": 1284
+              },
+              {
+                "x": 713,
+                "y": 1284
+              },
+              {
+                "x": 713,
+                "y": 1302
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::securiserRover->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::recupererPhysiquement": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 713,1360 L 713,1442",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 713,
+              "y": 1360
+            },
+            "targetPoint": {
+              "x": 713,
+              "y": 1442
+            },
+            "label": {
+              "x": 713,
+              "y": 1401
+            },
+            "points": [
+              {
+                "x": 713,
+                "y": 1360
+              },
+              {
+                "x": 713,
+                "y": 1442
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::recupererPhysiquement->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::finRecuperation": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 713,1500 L 713,1544",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 713,
+              "y": 1500
+            },
+            "targetPoint": {
+              "x": 713,
+              "y": 1544
+            },
+            "label": {
+              "x": 713,
+              "y": 1522
+            },
+            "points": [
+              {
+                "x": 713,
+                "y": 1500
+              },
+              {
+                "x": 713,
+                "y": 1544
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::enregistrerDernierePosition->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::signalerRoverAbandonne": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 972.5,662.25 L 972.5,931",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 972.5,
+              "y": 662.25
+            },
+            "targetPoint": {
+              "x": 972.5,
+              "y": 931
+            },
+            "label": {
+              "x": 972.5,
+              "y": 796.625
+            },
+            "points": [
+              {
+                "x": 972.5,
+                "y": 662.25
+              },
+              {
+                "x": 972.5,
+                "y": 931
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::signalerRoverAbandonne->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::finRecuperation": {
+            "sourceHandle": "bottom",
+            "targetHandle": "right",
+            "path": "M 972.5,989 L 972.5,1560 Q 972.5,1568 964.5,1568 L 799,1568",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 972.5,
+              "y": 989
+            },
+            "targetPoint": {
+              "x": 799,
+              "y": 1568
+            },
+            "label": {
+              "x": 972.5,
+              "y": 1365.25
+            },
+            "points": [
+              {
+                "x": 972.5,
+                "y": 989
+              },
+              {
+                "x": 972.5,
+                "y": 1568
+              },
+              {
+                "x": 799,
+                "y": 1568
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::finRecuperation->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::joinFin": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top:0.700",
+            "path": "M 713,1592 L 713,1732 Q 713,1740 705,1740 L 648,1740 Q 640,1740 640,1748 L 640,1758",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 713,
+              "y": 1592
+            },
+            "targetPoint": {
+              "x": 640,
+              "y": 1758
+            },
+            "label": {
+              "x": 713,
+              "y": 1711.5
+            },
+            "points": [
+              {
+                "x": 713,
+                "y": 1592
+              },
+              {
+                "x": 713,
+                "y": 1740
+              },
+              {
+                "x": 640,
+                "y": 1740
+              },
+              {
+                "x": 640,
+                "y": 1758
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::joinFin->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::redigerCompteRendu": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 582,1770 L 582,1833.703 Q 582,1834 582.297,1834 L 582.297,1834 Q 582.594,1834 582.594,1834.297 L 582.594,1852",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 582,
+              "y": 1770
+            },
+            "targetPoint": {
+              "x": 582.5940763891757,
+              "y": 1852
+            },
+            "label": {
+              "x": 582,
+              "y": 1811.297038194588
+            },
+            "points": [
+              {
+                "x": 582,
+                "y": 1770
+              },
+              {
+                "x": 582,
+                "y": 1834
+              },
+              {
+                "x": 582.5940763891757,
+                "y": 1834
+              },
+              {
+                "x": 582.5940763891757,
+                "y": 1852
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::redigerCompteRendu->flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::fin": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 582.594,1910 L 582.594,2000.133",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 582.5940763891757,
+              "y": 1910
+            },
+            "targetPoint": {
+              "x": 582.5940763891757,
+              "y": 2000.132839699098
+            },
+            "label": {
+              "x": 582.5940763891757,
+              "y": 1955.066419849549
+            },
+            "points": [
+              {
+                "x": 582.5940763891757,
+                "y": 1910
+              },
+              {
+                "x": 582.5940763891757,
+                "y": 2000.132839699098
+              }
+            ],
+            "corner": 8
+          },
+          "succession:flux_RecupererRover::FluxRecupererRover/flux_RecupererRover::FluxRecupererRover::fin->flux_RecupererRover::FluxRecupererRover/__final__": {
+            "sourceHandle": "bottom",
+            "targetHandle": "top",
+            "path": "M 582.594,2058.133 L 582.594,2150.589",
+            "lineStyle": "orthogonal",
+            "sourcePoint": {
+              "x": 582.5940763891757,
+              "y": 2058.132839699098
+            },
+            "targetPoint": {
+              "x": 582.5940763891758,
+              "y": 2150.5893478836524
+            },
+            "label": {
+              "x": 582.5940763891758,
+              "y": 2104.3610937913754
+            },
+            "points": [
+              {
+                "x": 582.5940763891757,
+                "y": 2058.132839699098
+              },
+              {
+                "x": 582.5940763891758,
+                "y": 2150.5893478836524
+              }
+            ],
+            "corner": 8
+          }
+        }
+      }
+    }
+  }
+}
