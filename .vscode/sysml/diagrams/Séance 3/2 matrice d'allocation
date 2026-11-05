@@ -1,0 +1,54 @@
+package allocation_ROVLibre {
+
+    private import blocs_ROVLibre::*;
+    private import materiel_ROVLibre::*;
+
+    part def AllocationROVLibre {
+
+        // ===== Côté fonctionnel (blocs identifiés en séance 2) =====
+        part fonctions {
+            part station : StationControle;
+            part energie : GestionEnergie;
+            part pilotage : GestionPilotage;
+            part perception : GestionPerception;
+            part communication : GestionCommunication;
+            part navigation : GestionNavigation;
+            part stockage : StockageEmbarque;
+        }
+
+        // ===== Côté matériel (architecture physique) =====
+        part materiel : ArchitectureMaterielROVLibre;
+
+        // ===== Matrice d'Allocations : bloc fonctionnel -> bloc matériel =====
+        
+        // Station de contrôle
+        allocate fonctions.station to materiel.station.poste;
+        allocate fonctions.station to materiel.station.manette;
+        allocate fonctions.station to materiel.station.serveur;
+
+        // Énergie
+        allocate fonctions.energie to materiel.rover.energie;
+
+        // Pilotage et Mobilité
+        allocate fonctions.pilotage to materiel.rover.calcul;
+        allocate fonctions.pilotage to materiel.rover.mobilite;
+        allocate fonctions.pilotage to materiel.rover.flottabilite;
+
+        // Perception (Caméras, capteurs)
+        allocate fonctions.perception to materiel.rover.perception;
+        allocate fonctions.perception to materiel.rover.observation;
+        allocate fonctions.perception to materiel.rover.calcul;
+
+        // Navigation
+        allocate fonctions.navigation to materiel.rover.calcul;
+        allocate fonctions.navigation to materiel.rover.perception;
+
+        // Communication (incluant l'innovation des micro-balises)
+        allocate fonctions.communication to materiel.rover.radio;
+        allocate fonctions.communication to materiel.relais;
+        allocate fonctions.communication to materiel.station.radio;
+
+        // Stockage Embarqué
+        allocate fonctions.stockage to materiel.rover.memoire;
+    }
+}
