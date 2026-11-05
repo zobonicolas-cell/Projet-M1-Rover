@@ -3,10 +3,10 @@ package useCases_ROVLibre {
     private import contexte_ROVLibre::definitions::*;
 
     // Les acteurs du système
-    actor telepilote : Telepilote;
-    actor analyste : Analyste;
-    actor chefEquipe : ChefEquipe;
-    actor technicien : Technicien;
+    actor telepilote : 'Telepilote';
+    actor analyste : 'Analyste';
+    actor chefEquipe : 'ChefEquipe';
+    actor technicien : 'Technicien';
 
     // Préparation de la mission
     use case mettreEnOeuvre {
