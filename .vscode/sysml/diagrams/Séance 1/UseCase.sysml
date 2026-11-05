@@ -2,11 +2,17 @@ package useCases_ROVLibre {
 
     private import contexte_ROVLibre::definitions::*;
 
+    // Types des acteurs (à supprimer si déjà définis dans contexte_ROVLibre)
+    part def Telepilote;
+    part def Analyste;
+    part def ChefEquipe;
+    part def Technicien;
+
     // Les acteurs du système
-    actor telepilote : 'Telepilote';
-    actor analyste : 'Analyste';
-    actor chefEquipe : 'ChefEquipe';
-    actor technicien : 'Technicien';
+    actor telepilote : Telepilote;
+    actor analyste : Analyste;
+    actor chefEquipe : ChefEquipe;
+    actor technicien : Technicien;
 
     // Préparation de la mission
     use case mettreEnOeuvre {
