@@ -2,10 +2,6 @@ package materiel_ROVLibre {
 
     private import contexte_ROVLibre::definitions::*;
 
-    // ===== Éléments échangés entre les composants =====
-    item def Electricite;
-    item def TrameRadio;      // trame chiffrée échangée par radio
-
     // ===== Composants élémentaires du rover =====
     part def ChassisEtanche;
     part def Motoreducteur;
@@ -77,22 +73,22 @@ package materiel_ROVLibre {
         part radio : ModuleRadioRover;
 
         // Alimentation
-        flow alimCalcul       of Electricite from energie to calcul;
-        flow alimMobilite     of Electricite from energie to mobilite;
-        flow alimPerception   of Electricite from energie to perception;
-        flow alimFlottabilite of Electricite from energie to flottabilite;
-        flow alimObservation  of Electricite from energie to observation;
-        flow alimRadio        of Electricite from energie to radio;
+        connection alimCalcul connect energie to calcul;
+        connection alimMobilite connect energie to mobilite;
+        connection alimPerception connect energie to perception;
+        connection alimFlottabilite connect energie to flottabilite;
+        connection alimObservation connect energie to observation;
+        connection alimRadio connect energie to radio;
 
         // États, commandes et données
-        flow etatBatterie        of EtatSysteme   from energie to calcul;
-        flow donneesPerception   of DonneesMission from perception to calcul;
-        flow commandeMobilite    of Commande      from calcul to mobilite;
-        flow commandeFlottabilite of Commande     from calcul to flottabilite;
-        flow etatFlottabilite    of EtatSysteme   from flottabilite to calcul;
-        flow commandeObservation of Commande      from calcul to observation;
-        flow donneesObservation  of DonneesMission from observation to calcul;
-        flow sauvegardeDonnees   of DonneesMission from calcul to memoire;
+        connection etatBatterie connect energie to calcul;
+        connection donneesPerception connect perception to calcul;
+        connection commandeMobilite connect calcul to mobilite;
+        connection commandeFlottabilite connect calcul to flottabilite;
+        connection etatFlottabilite connect flottabilite to calcul;
+        connection commandeObservation connect calcul to observation;
+        connection donneesObservation connect observation to calcul;
+        connection sauvegardeDonnees connect calcul to memoire;
 
         connection liaisonRadioCalcul connect calcul to radio;
 
@@ -107,8 +103,8 @@ package materiel_ROVLibre {
         part radio : ModuleRadioStation;
         part serveur : ServeurDonnees;
 
-        flow commandesManette of Commande       from manette to poste;
-        flow donneesServeur   of DonneesMission from poste to serveur;
+        connection commandesManette connect manette to poste;
+        connection donneesServeur connect poste to serveur;
         connection liaisonRadio connect poste to radio;
     }
 
@@ -125,3 +121,4 @@ package materiel_ROVLibre {
     // ===== Instance racine =====
     part architectureROVLibre : ArchitectureMaterielROVLibre;
 }
+

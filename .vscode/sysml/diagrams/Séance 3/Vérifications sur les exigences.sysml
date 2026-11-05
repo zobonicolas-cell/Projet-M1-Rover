@@ -7,46 +7,38 @@ package verification_ROVLibre {
     part architecture : ArchitectureMaterielROVLibre;
 
     // =====================================================================
-    // 1. Satisfaction : quel bloc matériel répond à quelle exigence
+    // 1. Satisfaction : les exigences portent sur un sujet de type ROVLibre,
+    //    c'est donc le système complet (architecture) qui les satisfait.
+    //    Le commentaire de chaque ligne indique les blocs matériels concernés.
     // =====================================================================
 
     // ---- Exigences fonctionnelles
-    satisfy fonctionnelles::deplacementTousTerrains  by architecture.rover.mobilite;
-    satisfy fonctionnelles::deplacementTousTerrains  by architecture.rover.chassis;
-    satisfy fonctionnelles::navigationAutonome       by architecture.rover.perception;
-    satisfy fonctionnelles::navigationAutonome       by architecture.rover.calcul;
-    satisfy fonctionnelles::perteLiaison             by architecture.rover.calcul;
-    satisfy fonctionnelles::perteLiaison             by architecture.rover.radio;
-    satisfy fonctionnelles::observationToutTemps     by architecture.rover.perception;
-    satisfy fonctionnelles::detectionAutomatique     by architecture.rover.perception;
-    satisfy fonctionnelles::detectionAutomatique     by architecture.rover.calcul;
-    satisfy fonctionnelles::transmissionTempsReel    by architecture.rover.radio;
-    satisfy fonctionnelles::transmissionTempsReel    by architecture.relais;
-    satisfy fonctionnelles::transmissionTempsReel    by architecture.station.radio;
-    satisfy fonctionnelles::conservationDonnees      by architecture.station.serveur;
-    satisfy fonctionnelles::conservationDonnees      by architecture.rover.memoire;
+    satisfy fonctionnelles::deplacementTousTerrains by architecture;  // rover.mobilite, rover.chassis
+    satisfy fonctionnelles::navigationAutonome      by architecture;  // rover.perception, rover.calcul
+    satisfy fonctionnelles::perteLiaison            by architecture;  // rover.calcul, rover.radio
+    satisfy fonctionnelles::observationToutTemps    by architecture;  // rover.perception
+    satisfy fonctionnelles::detectionAutomatique    by architecture;  // rover.perception, rover.calcul
+    satisfy fonctionnelles::transmissionTempsReel   by architecture;  // rover.radio, relais, station.radio
+    satisfy fonctionnelles::conservationDonnees     by architecture;  // station.serveur, rover.memoire
 
     // ---- Exigences liées aux innovations
-    satisfy innovantes::detectionImmersion                by architecture.rover.flottabilite;
-    satisfy innovantes::absenceDeclenchementIntempestif   by architecture.rover.flottabilite;
-    satisfy innovantes::absenceDeclenchementIntempestif   by architecture.rover.calcul;
-    satisfy innovantes::navigationSurface                 by architecture.rover.flottabilite;
-    satisfy innovantes::navigationSurface                 by architecture.rover.chassis;
-    satisfy innovantes::retourModeTerrestre               by architecture.rover.flottabilite;
-    satisfy innovantes::retourModeTerrestre               by architecture.rover.calcul;
-    satisfy innovantes::infiltrationFissure               by architecture.rover.observation;
-    satisfy innovantes::inspectionSansPerturbation        by architecture.rover.observation;
-    satisfy innovantes::replisSur                         by architecture.rover.observation;
+    satisfy innovantes::detectionImmersion              by architecture;  // rover.flottabilite
+    satisfy innovantes::absenceDeclenchementIntempestif by architecture;  // rover.flottabilite, rover.calcul
+    satisfy innovantes::navigationSurface               by architecture;  // rover.flottabilite, rover.chassis
+    satisfy innovantes::retourModeTerrestre             by architecture;  // rover.flottabilite, rover.calcul
+    satisfy innovantes::infiltrationFissure             by architecture;  // rover.observation
+    satisfy innovantes::inspectionSansPerturbation      by architecture;  // rover.observation
+    satisfy innovantes::replisSur                       by architecture;  // rover.observation
 
     // ---- Environnement et robustesse
-    satisfy environnement::etancheite          by architecture.rover.chassis;
-    satisfy environnement::temperatureStockage by architecture.rover;
-    satisfy environnement::resistanceChocs     by architecture.rover.chassis;
+    satisfy environnement::etancheite          by architecture;  // rover.chassis
+    satisfy environnement::temperatureStockage by architecture;  // rover entier
+    satisfy environnement::resistanceChocs     by architecture;  // rover.chassis
 
     // ---- Contraintes de mise en œuvre
-    satisfy contraintes::transportabilite   by architecture.rover;
-    satisfy contraintes::miseEnOeuvreRapide by architecture.rover.calcul;
-    satisfy contraintes::autonomie          by architecture.rover.energie;
+    satisfy contraintes::transportabilite   by architecture;  // rover entier
+    satisfy contraintes::miseEnOeuvreRapide by architecture;  // rover.calcul (auto-test)
+    satisfy contraintes::autonomie          by architecture;  // rover.energie
     // contraintes::reglementation et contraintes::nonArme : pas de bloc dédié,
     // elles sont vérifiées par analyse et inspection (voir ci-dessous).
 
