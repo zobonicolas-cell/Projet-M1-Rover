@@ -4,7 +4,7 @@ package verification_ROVLibre {
     private import materiel_ROVLibre::*;
     private import exigences_ROVLibre::*;
 
-    part architecture : ArchitectureMaterielROVLibre;
+    part architecture : 'ArchitectureMaterielROVLibre';
 
     // =====================================================================
     // 1. Satisfaction : les exigences portent sur un sujet de type ROVLibre,
