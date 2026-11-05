@@ -1,13 +1,19 @@
 package sequences_remettreEnEtat {
 
-    private import contexte_ROVLibre::definitions::*;
-    private import sequences_adapterImmersion::*;  // blocs fonctionnels, EtatFlottabilite, NiveauBatterie
+    // ===== Acteur et blocs fonctionnels
+    part def Technicien;
+    part def DispositifFlottabilite;
+    part def GestionEnergie;
+    part def StationControle;
+    part def UniteControle;
 
-    // ===== Messages propres à ce cas
+    // ===== Messages échangés
     item def Rearmement;
     item def Recharge;
     item def DemandeAutoTest;
     item def DemandeEtat;
+    item def EtatFlottabilite;
+    item def NiveauBatterie;
     item def RapportAutoTest;
 
     occurrence def S1_RemiseEnEtatNominale {
