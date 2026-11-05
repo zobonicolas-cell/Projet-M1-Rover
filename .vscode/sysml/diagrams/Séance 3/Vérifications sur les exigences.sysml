@@ -150,4 +150,41 @@ package verification_ROVLibre {
         subject systeme : ROVLibre;
         objective { verify contraintes::nonArme; }
     }
+    
+    // =====================================================================
+    // 3. Compléments FI1 (RAMI) : exigences issues des cas d'utilisation
+    //    adapterImmersion et remettreEnEtat, absentes de la table initiale.
+    // =====================================================================
+
+    package complementsFI1 {
+        private import contexte_ROVLibre::definitions::*;
+
+        requirement <'EI8'> signalementModeAquatique {
+            subject systeme : ROVLibre;
+            doc /* FI1 : la station de contrôle doit indiquer en permanence au
+                   télépilote que le rover est en mode aquatique, ainsi que son
+                   autonomie restante. */
+        }
+        requirement <'EI9'> rearmementFlottabilite {
+            subject systeme : ROVLibre;
+            doc /* FI1 : après usage, le dispositif de flottabilité doit pouvoir être
+                   réarmé par le technicien en moins de 15 min (à valider). */
+        }
+    }
+
+    satisfy complementsFI1::signalementModeAquatique by architecture;  // station.poste, rover.radio
+    satisfy complementsFI1::rearmementFlottabilite   by architecture;  // rover.flottabilite
+
+    verification def EssaiSignalementMode {
+        doc /* Essai : déclenchement de FI1 en bassin, contrôle de l'affichage du mode
+               aquatique et de l'autonomie restante sur la station de contrôle. */
+        subject systeme : ROVLibre;
+        objective { verify complementsFI1::signalementModeAquatique; }
+    }
+    verification def EssaiRearmement {
+        doc /* Essai : chronométrage du réarmement de la flottabilité par un technicien
+               après un déclenchement, puis auto-test de bon fonctionnement. */
+        subject systeme : ROVLibre;
+        objective { verify complementsFI1::rearmementFlottabilite; }
+    }
 }
