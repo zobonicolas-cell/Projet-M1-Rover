@@ -1,29 +1,26 @@
-package blocs_ROVLibre {
-
-    part def StationControle;
-    part def GestionEnergie;
-    part def GestionPilotage;
-    part def GestionPerception;
-    part def GestionCommunication;
-    part def GestionNavigation;
-    part def StockageEmbarque;
-}
 package sequences_ConduireRover {
 
     private import contexte_ROVLibre::definitions::*;
     private import blocs_ROVLibre::*;
 
-    // ===== Scénario 1 : cycle nominal =====
-    occurrence def ScenarioConduireNominal {
+    occurrence def ScenarioConduireRover {
+
+        // ===== Participants (une seule ligne de vie chacun) =====
         part telepilote : Telepilote {
             event occurrence envoiCommande;
             event occurrence receptionEtat;
+            event occurrence receptionAlerteObstacle;
+            event occurrence receptionAlerteBatterie;
         }
         part station : StationControle {
             event occurrence receptionCommande;
             event occurrence transmissionCommande;
             event occurrence receptionRetour;
             event occurrence affichageEtat;
+            event occurrence receptionAlerteObstacle;
+            event occurrence affichageAlerteObstacle;
+            event occurrence receptionAlerteBatterie;
+            event occurrence affichageAlerteBatterie;
         }
         part communication : GestionCommunication {
             event occurrence receptionRadio;
@@ -31,98 +28,77 @@ package sequences_ConduireRover {
             event occurrence receptionDonnees;
             event occurrence receptionEtatRover;
             event occurrence envoiRetour;
+            event occurrence receptionAlerteObstacleRover;
+            event occurrence envoiAlerteObstacle;
+            event occurrence receptionAlerteBatterieRover;
+            event occurrence envoiAlerteBatterie;
         }
         part energie : GestionEnergie {
             event occurrence envoiNiveauBatterie;
+            event occurrence envoiNiveauCritique;
         }
         part pilotage : GestionPilotage {
             event occurrence receptionBatterie;
+            event occurrence receptionBatterieCritique;
             event occurrence receptionOrdre;
             event occurrence demandeAnalyse;
             event occurrence receptionTerrain;
+            event occurrence receptionObstacle;
             event occurrence envoiEtat;
+            event occurrence envoiAlerteObstacle;
+            event occurrence envoiAlerteBatterie;
         }
         part perception : GestionPerception {
             event occurrence receptionDemande;
             event occurrence envoiTerrain;
             event occurrence envoiDonnees;
-        }
-
-        message verifierEtatSysteme of EtatSysteme from energie.envoiNiveauBatterie to pilotage.receptionBatterie;
-        message recevoirCommande of Commande from telepilote.envoiCommande to station.receptionCommande;
-        message relayerCommande of Commande from station.transmissionCommande to communication.receptionRadio;
-        message validerCommande of Commande from communication.transmissionPilotage to pilotage.receptionOrdre;
-        message analyserTerrain of Commande from pilotage.demandeAnalyse to perception.receptionDemande;
-        message resultatAnalyseTerrain of DonneesMission from perception.envoiTerrain to pilotage.receptionTerrain;
-        message collecterDonnees of DonneesMission from perception.envoiDonnees to communication.receptionDonnees;
-        message transmettreEtat of EtatSysteme from pilotage.envoiEtat to communication.receptionEtatRover;
-        message transmettreDonnees of DonneesMission from communication.envoiRetour to station.receptionRetour;
-        message transmettreEtatTelepilote of EtatSysteme from station.affichageEtat to telepilote.receptionEtat;
-    }
-
-    // ===== Scénario 2 : obstacle bloquant =====
-    occurrence def ScenarioConduireObstacle {
-        part telepilote : Telepilote {
-            event occurrence envoiCommande;
-            event occurrence receptionAlerte;
-        }
-        part station : StationControle {
-            event occurrence receptionCommande;
-            event occurrence transmissionCommande;
-            event occurrence receptionAlerte;
-            event occurrence affichageAlerte;
-        }
-        part communication : GestionCommunication {
-            event occurrence receptionRadio;
-            event occurrence transmissionPilotage;
-            event occurrence receptionAlerteRover;
-            event occurrence envoiAlerte;
-        }
-        part pilotage : GestionPilotage {
-            event occurrence receptionOrdre;
-            event occurrence demandeAnalyse;
-            event occurrence receptionObstacle;
-            event occurrence envoiAlerte;
-        }
-        part perception : GestionPerception {
-            event occurrence receptionDemande;
             event occurrence envoiObstacle;
         }
 
-        message recevoirCommande of Commande from telepilote.envoiCommande to station.receptionCommande;
-        message relayerCommande of Commande from station.transmissionCommande to communication.receptionRadio;
-        message validerCommande of Commande from communication.transmissionPilotage to pilotage.receptionOrdre;
-        message analyserTerrain of Commande from pilotage.demandeAnalyse to perception.receptionDemande;
-        message resultatAnalyseTerrain of DonneesMission from perception.envoiObstacle to pilotage.receptionObstacle;
-        message arreterRover of EtatSysteme from pilotage.envoiAlerte to communication.receptionAlerteRover;
-        message transmettreEtat of EtatSysteme from communication.envoiAlerte to station.receptionAlerte;
-        message transmettreEtatTelepilote of EtatSysteme from station.affichageAlerte to telepilote.receptionAlerte;
-    }
+        // ===== Phase 1 : contrôle de l'état et envoi de la commande =====
+        message verifierEtatSysteme of EtatSysteme
+            from energie.envoiNiveauBatterie to pilotage.receptionBatterie;
+        message recevoirCommande of Commande
+            from telepilote.envoiCommande to station.receptionCommande;
+        message relayerCommande of Commande
+            from station.transmissionCommande to communication.receptionRadio;
+        message validerCommande of Commande
+            from communication.transmissionPilotage to pilotage.receptionOrdre;
 
-    // ===== Scénario 3 : batterie critique =====
-    occurrence def ScenarioConduireBatterieCritique {
-        part telepilote : Telepilote {
-            event occurrence receptionAlerte;
-        }
-        part station : StationControle {
-            event occurrence receptionAlerte;
-            event occurrence affichageAlerte;
-        }
-        part communication : GestionCommunication {
-            event occurrence receptionAlerteRover;
-            event occurrence envoiAlerte;
-        }
-        part energie : GestionEnergie {
-            event occurrence envoiNiveauCritique;
-        }
-        part pilotage : GestionPilotage {
-            event occurrence receptionBatterie;
-            event occurrence envoiAlerte;
-        }
+        // ===== Phase 2 : analyse du terrain =====
+        message analyserTerrain of Commande
+            from pilotage.demandeAnalyse to perception.receptionDemande;
 
-        message verifierEtatSysteme of EtatSysteme from energie.envoiNiveauCritique to pilotage.receptionBatterie;
-        message signalerBatterieCritique of EtatSysteme from pilotage.envoiAlerte to communication.receptionAlerteRover;
-        message transmettreEtat of EtatSysteme from communication.envoiAlerte to station.receptionAlerte;
-        message transmettreEtatTelepilote of EtatSysteme from station.affichageAlerte to telepilote.receptionAlerte;
+        // ===== Phase 3 : cycle nominal =====
+        message resultatAnalyseTerrain of DonneesMission
+            from perception.envoiTerrain to pilotage.receptionTerrain;
+        message collecterDonnees of DonneesMission
+            from perception.envoiDonnees to communication.receptionDonnees;
+        message transmettreEtat of EtatSysteme
+            from pilotage.envoiEtat to communication.receptionEtatRover;
+        message transmettreDonnees of DonneesMission
+            from communication.envoiRetour to station.receptionRetour;
+        message transmettreEtatTelepilote of EtatSysteme
+            from station.affichageEtat to telepilote.receptionEtat;
+
+        // ===== Phase 4 : variante obstacle bloquant =====
+        message resultatAnalyseObstacle of DonneesMission
+            from perception.envoiObstacle to pilotage.receptionObstacle;
+        message arreterRover of EtatSysteme
+            from pilotage.envoiAlerteObstacle to communication.receptionAlerteObstacleRover;
+        message transmettreAlerteObstacle of EtatSysteme
+            from communication.envoiAlerteObstacle to station.receptionAlerteObstacle;
+        message transmettreAlerteObstacleTelepilote of EtatSysteme
+            from station.affichageAlerteObstacle to telepilote.receptionAlerteObstacle;
+
+        // ===== Phase 5 : variante batterie critique =====
+        message verifierNiveauCritique of EtatSysteme
+            from energie.envoiNiveauCritique to pilotage.receptionBatterieCritique;
+        message signalerBatterieCritique of EtatSysteme
+            from pilotage.envoiAlerteBatterie to communication.receptionAlerteBatterieRover;
+        message transmettreAlerteBatterie of EtatSysteme
+            from communication.envoiAlerteBatterie to station.receptionAlerteBatterie;
+        message transmettreAlerteBatterieTelepilote of EtatSysteme
+            from station.affichageAlerteBatterie to telepilote.receptionAlerteBatterie;
     }
 }
