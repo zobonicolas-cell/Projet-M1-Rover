@@ -1,0 +1,127 @@
+package materiel_ROVLibre {
+
+    private import contexte_ROVLibre::definitions::*;
+
+    // ===== Éléments échangés entre les composants =====
+    item def Electricite;
+    item def TrameRadio;      // trame chiffrée échangée par radio
+
+    // ===== Composants élémentaires du rover =====
+    part def ChassisEtanche;
+    part def Motoreducteur;
+    part def TrainChenilles;
+    part def DetecteurImmersion;
+    part def SystemeGonflage;
+    part def Flotteur;
+    part def BatterieRemplacable;
+    part def ControleurBatterie;
+    part def CameraVisible;
+    part def CameraThermique;
+    part def Lidar;
+    part def CentraleInertielle;
+    part def SondeSouple;
+    part def MecanismeDeploiement;
+
+    // ===== Modules du rover =====
+    part def ModuleMobilite {
+        part motorisation : Motoreducteur[2];
+        part chenilles : TrainChenilles[2];
+    }
+
+    // FI1 : détecteur et gonflage dans un même module pour réagir en moins de 2 s
+    part def ModuleFlottabilite {
+        part detecteur : DetecteurImmersion;
+        part gonflage : SystemeGonflage;
+        part flotteurs : Flotteur[2];
+    }
+
+    part def ModuleEnergie {
+        part batterie : BatterieRemplacable;
+        part controleur : ControleurBatterie;
+    }
+
+    part def ModulePerception {
+        part cameraVisible : CameraVisible;
+        part cameraThermique : CameraThermique;
+        part lidar : Lidar;
+        part centrale : CentraleInertielle;
+    }
+
+    // FI2 : moyen d'observation déporté (sonde souple dans une fissure)
+    part def ModuleObservationDeportee {
+        part sonde : SondeSouple;
+        part mecanisme : MecanismeDeploiement;
+    }
+
+    part def CalculateurEmbarque;
+    part def MemoireEmbarquee;
+    part def ModuleRadioRover;
+
+    // ===== Station de contrôle et relais =====
+    part def PosteOperateur;
+    part def ManettePilotage;
+    part def ModuleRadioStation;
+    part def ServeurDonnees;
+    part def RelaisRadio;
+
+    // ===== Vue d'interconnexion du rover =====
+    part def RoverMateriel {
+        part chassis : ChassisEtanche;
+        part mobilite : ModuleMobilite;
+        part flottabilite : ModuleFlottabilite;
+        part energie : ModuleEnergie;
+        part perception : ModulePerception;
+        part observation : ModuleObservationDeportee;
+        part calcul : CalculateurEmbarque;
+        part memoire : MemoireEmbarquee;
+        part radio : ModuleRadioRover;
+
+        // Alimentation
+        flow alimCalcul       of Electricite from energie to calcul;
+        flow alimMobilite     of Electricite from energie to mobilite;
+        flow alimPerception   of Electricite from energie to perception;
+        flow alimFlottabilite of Electricite from energie to flottabilite;
+        flow alimObservation  of Electricite from energie to observation;
+        flow alimRadio        of Electricite from energie to radio;
+
+        // États, commandes et données
+        flow etatBatterie        of EtatSysteme   from energie to calcul;
+        flow donneesPerception   of DonneesMission from perception to calcul;
+        flow commandeMobilite    of Commande      from calcul to mobilite;
+        flow commandeFlottabilite of Commande     from calcul to flottabilite;
+        flow etatFlottabilite    of EtatSysteme   from flottabilite to calcul;
+        flow commandeObservation of Commande      from calcul to observation;
+        flow donneesObservation  of DonneesMission from observation to calcul;
+        flow sauvegardeDonnees   of DonneesMission from calcul to memoire;
+
+        connection liaisonRadioCalcul connect calcul to radio;
+
+        // Le châssis porte l'ensemble des modules
+        connection portage connect chassis to calcul;
+    }
+
+    // ===== Vue d'interconnexion de la station =====
+    part def StationMateriel {
+        part poste : PosteOperateur;
+        part manette : ManettePilotage;
+        part radio : ModuleRadioStation;
+        part serveur : ServeurDonnees;
+
+        flow commandesManette of Commande       from manette to poste;
+        flow donneesServeur   of DonneesMission from poste to serveur;
+        connection liaisonRadio connect poste to radio;
+    }
+
+    // ===== Système complet : rover + relais radio + station =====
+    part def ArchitectureMaterielROVLibre :> ROVLibre {
+        part rover : RoverMateriel;
+        part relais : RelaisRadio;
+        part station : StationMateriel;
+
+        connection liaisonRoverRelais   connect rover to relais;
+        connection liaisonRelaisStation connect relais to station;
+    }
+
+    // ===== Instance racine =====
+    part architectureROVLibre : ArchitectureMaterielROVLibre;
+}
