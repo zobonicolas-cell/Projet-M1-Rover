@@ -1,3 +1,27 @@
+// =====================================================================
+// Blocs fonctionnels (identifiés en séance 2)
+// =====================================================================
+package blocs_ROVLibre {
+
+    // Blocs communs (groupe)
+    part def StationControle;
+    part def GestionEnergie;
+    part def GestionPilotage;
+    part def GestionPerception;
+    part def GestionCommunication;
+    part def GestionNavigation;
+    part def StockageEmbarque;
+
+    // Blocs FI1 – flottabilité réactive (RAMI)
+    part def DetecteurImmersion;
+    part def CoupureElectrique;
+    part def DispositifFlottabilite;
+    part def PropulsionAquatique;
+}
+
+// =====================================================================
+// Matrice d'allocation
+// =====================================================================
 package allocation_ROVLibre {
 
     private import blocs_ROVLibre::*;
@@ -14,6 +38,12 @@ package allocation_ROVLibre {
             part communication : GestionCommunication;
             part navigation : GestionNavigation;
             part stockage : StockageEmbarque;
+
+            // FI1 – flottabilité réactive (RAMI)
+            part detecteurImmersion : DetecteurImmersion;
+            part coupure : CoupureElectrique;
+            part flottabilite : DispositifFlottabilite;
+            part propulsionAquatique : PropulsionAquatique;
         }
 
         // ===== Côté matériel =====
@@ -50,5 +80,12 @@ package allocation_ROVLibre {
 
         // StockageEmbarque
         allocate fonctions.stockage to materiel.rover.memoire;
+
+        // FI1 – Flottabilité réactive (RAMI)
+        allocate fonctions.detecteurImmersion to materiel.rover.perception;
+        allocate fonctions.detecteurImmersion to materiel.rover.calcul;
+        allocate fonctions.coupure to materiel.rover.energie;
+        allocate fonctions.flottabilite to materiel.rover.flottabilite;
+        allocate fonctions.propulsionAquatique to materiel.rover.mobilite;
     }
 }
