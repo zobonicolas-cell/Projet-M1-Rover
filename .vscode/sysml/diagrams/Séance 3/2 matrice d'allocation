@@ -3,7 +3,8 @@ package allocation_ROVLibre {
     private import blocs_ROVLibre::*;
     private import materiel_ROVLibre::*;
 
-    part def AllocationROVLibre {
+    // CORRECTION : "allocation def" déclenche l'affichage du logo Matrice (le bouton bleu)
+    allocation def AllocationROVLibre {
 
         // ===== Côté fonctionnel (blocs identifiés en séance 2) =====
         part fonctions {
