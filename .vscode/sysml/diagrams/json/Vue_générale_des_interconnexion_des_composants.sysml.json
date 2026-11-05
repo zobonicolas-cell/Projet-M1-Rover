@@ -1,0 +1,282 @@
+{
+  "version": 9,
+  "structuredDefaults": "inherited",
+  "anchors": {
+    "materiel_ROVLibre": {
+      "gv": {
+        "gvViews": {
+          "group": {
+            "layout": {
+              "materiel_ROVLibre::Electricite": {
+                "x": 231,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::TrameRadio": {
+                "x": 367,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ChassisEtanche": {
+                "x": 503,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::Motoreducteur": {
+                "x": 651,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::TrainChenilles": {
+                "x": 792,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::DetecteurImmersion": {
+                "x": 8,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::SystemeGonflage": {
+                "x": 183,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::Flotteur": {
+                "x": 338,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::BatterieRemplacable": {
+                "x": 474,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 150,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ControleurBatterie": {
+                "x": 656,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::CameraVisible": {
+                "x": 831,
+                "y": 392,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::CameraThermique": {
+                "x": 8,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::Lidar": {
+                "x": 163,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::CentraleInertielle": {
+                "x": 299,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::SondeSouple": {
+                "x": 474,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::MecanismeDeploiement": {
+                "x": 610,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 157,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ModuleMobilite": {
+                "x": 641,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 86
+              },
+              "materiel_ROVLibre::ModuleFlottabilite": {
+                "x": 466,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 100
+              },
+              "materiel_ROVLibre::ModuleEnergie": {
+                "x": 789,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 86
+              },
+              "materiel_ROVLibre::ModulePerception": {
+                "x": 304,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 114
+              },
+              "materiel_ROVLibre::ModuleObservationDeportee": {
+                "x": 8,
+                "y": 274,
+                "parentKey": null,
+                "collapsedW": 191,
+                "collapsedH": 86
+              },
+              "materiel_ROVLibre::CalculateurEmbarque": {
+                "x": 799,
+                "y": 482,
+                "parentKey": null,
+                "collapsedW": 150,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::MemoireEmbarquee": {
+                "x": 8,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ModuleRadioRover": {
+                "x": 170,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::PosteOperateur": {
+                "x": 332,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ManettePilotage": {
+                "x": 480,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ModuleRadioStation": {
+                "x": 635,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::ServeurDonnees": {
+                "x": 810,
+                "y": 572,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::RelaisRadio": {
+                "x": 8,
+                "y": 662,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "materiel_ROVLibre::RoverMateriel": {
+                "x": -119.79706790123458,
+                "y": -4.056327160493822,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 430,
+                "placedByHand": true
+              },
+              "materiel_ROVLibre::StationMateriel": {
+                "x": 149,
+                "y": 8,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 178
+              },
+              "materiel_ROVLibre::ArchitectureMaterielROVLibre": {
+                "x": 8,
+                "y": 922,
+                "parentKey": null,
+                "collapsedW": 211,
+                "collapsedH": 150
+              },
+              "materiel_ROVLibre::architectureROVLibre": {
+                "x": 35,
+                "y": 768,
+                "parentKey": null,
+                "collapsedW": 157,
+                "collapsedH": 58
+              }
+            },
+            "ports": {},
+            "edgeRoutes": {},
+            "edgeAnchors": {},
+            "edgeGeometry": {
+              "definedBy:materiel_ROVLibre::architectureROVLibre->materiel_ROVLibre::ArchitectureMaterielROVLibre": {
+                "sourceHandle": "bottom",
+                "targetHandle": "top",
+                "path": "M 113.5,826 L 113.5,922",
+                "lineStyle": "orthogonal",
+                "sourcePoint": {
+                  "x": 113.5,
+                  "y": 826
+                },
+                "targetPoint": {
+                  "x": 113.5,
+                  "y": 922
+                },
+                "label": {
+                  "x": 113.5,
+                  "y": 874
+                },
+                "points": [
+                  {
+                    "x": 113.5,
+                    "y": 826
+                  },
+                  {
+                    "x": 113.5,
+                    "y": 922
+                  }
+                ],
+                "corner": 8
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
