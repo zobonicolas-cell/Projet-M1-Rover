@@ -41,8 +41,8 @@ package allocation_ROVLibre {
         // GestionNavigation
         allocate fonctions.navigation to materiel.rover.calcul;
         allocate fonctions.navigation to materiel.rover.perception;
-        allocate fonctions.navigation to materiel.rover.mobilite
-             
+        allocate fonctions.navigation to materiel.rover.mobilite;
+
         // GestionCommunication
         allocate fonctions.communication to materiel.rover.radio;
         allocate fonctions.communication to materiel.relais;
