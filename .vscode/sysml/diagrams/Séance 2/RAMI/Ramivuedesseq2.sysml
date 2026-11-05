@@ -20,29 +20,29 @@ package sequences_remettreEnEtat {
         doc /* Après une mission avec usage de FI1 : le technicien réarme la
                flottabilité, recharge la batterie et lance l'auto-test, qui réussit. */
 
-        ref part technicien : Technicien {
+        part technicien : Technicien {
             event occurrence rearmementEnvoye;
             then event occurrence rechargeEnvoyee;
             then event occurrence autoTestDemande;
             then event occurrence rapportVu;
         }
-        ref part flottabilite : DispositifFlottabilite {
+        part flottabilite : DispositifFlottabilite {
             event occurrence rearmementRecu;
             then event occurrence demandeRecue;
             then event occurrence etatEnvoye;
         }
-        ref part energie : GestionEnergie {
+        part energie : GestionEnergie {
             event occurrence rechargeRecue;
             then event occurrence demandeRecue;
             then event occurrence niveauEnvoye;
         }
-        ref part station : StationControle {
+        part station : StationControle {
             event occurrence autoTestRecu;
             then event occurrence autoTestEnvoye;
             then event occurrence rapportRecu;
             then event occurrence rapportAffiche;
         }
-        ref part controle : UniteControle {
+        part controle : UniteControle {
             event occurrence autoTestRecu;
             then event occurrence demandeFlottEnvoyee;
             then event occurrence etatFlottRecu;
