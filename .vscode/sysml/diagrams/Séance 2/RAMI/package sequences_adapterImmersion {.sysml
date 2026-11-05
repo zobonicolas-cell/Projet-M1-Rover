@@ -1,6 +1,8 @@
 package sequences_adapterImmersion {
 
-    private import contexte_ROVLibre::definitions::*;
+    // ===== Acteurs externes
+    part def ZoneInondee;
+    part def Telepilote;
 
     // ===== Blocs fonctionnels identifiés
     part def DetecteurImmersion;
@@ -20,9 +22,11 @@ package sequences_adapterImmersion {
     item def AlerteModeAquatique;
     item def AlerteCritique;
     item def NiveauBatterie;
+    item def Commande;
     item def OrdreDeplacement;
     item def ConfirmationSolSec;
     item def OrdreDegonflage;
+    item def EtatSysteme;
 
     // ------------------------------------------------------------
     // Séquence 1 : scénario nominal
@@ -31,14 +35,14 @@ package sequences_adapterImmersion {
         doc /* Immersion confirmée, flottabilité acquise, navigation en surface
                puis retour au mode terrestre. */
 
-        ref part eau : ZoneInondee {
+        part eau : ZoneInondee {
             event occurrence contactEnvoye;
         }
-        ref part detecteur : DetecteurImmersion {
+        part detecteur : DetecteurImmersion {
             event occurrence contactRecu;
             then event occurrence signalEnvoye;
         }
-        ref part controle : UniteControle {
+        part controle : UniteControle {
             event occurrence signalRecu;
             then event occurrence protectionEnvoyee;
             then event occurrence gonflageEnvoye;
@@ -50,18 +54,18 @@ package sequences_adapterImmersion {
             then event occurrence degonflageEnvoye;
             then event occurrence etatEnvoye;
         }
-        ref part coupure : CoupureElectrique {
+        part coupure : CoupureElectrique {
             event occurrence protectionRecue;
         }
-        ref part flottabilite : DispositifFlottabilite {
+        part flottabilite : DispositifFlottabilite {
             event occurrence gonflageRecu;
             then event occurrence etatFlottEnvoye;
             then event occurrence degonflageRecu;
         }
-        ref part propulsion : PropulsionAquatique {
+        part propulsion : PropulsionAquatique {
             event occurrence deplacementRecu;
         }
-        ref part station : StationControle {
+        part station : StationControle {
             event occurrence alerteRecue;
             then event occurrence alerteAffichee;
             then event occurrence commandeRecue;
@@ -70,7 +74,7 @@ package sequences_adapterImmersion {
             then event occurrence solSecEnvoye;
             then event occurrence etatRecu;
         }
-        ref part telepilote : Telepilote {
+        part telepilote : Telepilote {
             event occurrence alerteVue;
             then event occurrence commandeEnvoyee;
             then event occurrence solSecEnvoye;
@@ -99,18 +103,18 @@ package sequences_adapterImmersion {
         doc /* L'immersion n'est pas confirmée : aucun déclenchement,
                l'événement est seulement journalisé à la station. */
 
-        ref part eau : ZoneInondee {
+        part eau : ZoneInondee {
             event occurrence contactEnvoye;
         }
-        ref part detecteur : DetecteurImmersion {
+        part detecteur : DetecteurImmersion {
             event occurrence contactRecu;
             then event occurrence signalEnvoye;
         }
-        ref part controle : UniteControle {
+        part controle : UniteControle {
             event occurrence signalRecu;
             then event occurrence etatEnvoye;
         }
-        ref part station : StationControle {
+        part station : StationControle {
             event occurrence etatRecu;
         }
 
@@ -126,32 +130,32 @@ package sequences_adapterImmersion {
         doc /* Le gonflage ne suffit pas : alerte critique, sauvegarde des
                données et envoi de la dernière position pour la récupération. */
 
-        ref part eau : ZoneInondee {
+        part eau : ZoneInondee {
             event occurrence contactEnvoye;
         }
-        ref part detecteur : DetecteurImmersion {
+        part detecteur : DetecteurImmersion {
             event occurrence contactRecu;
             then event occurrence signalEnvoye;
         }
-        ref part controle : UniteControle {
+        part controle : UniteControle {
             event occurrence signalRecu;
             then event occurrence protectionEnvoyee;
             then event occurrence gonflageEnvoye;
             then event occurrence etatFlottRecu;
             then event occurrence alerteEnvoyee;
         }
-        ref part coupure : CoupureElectrique {
+        part coupure : CoupureElectrique {
             event occurrence protectionRecue;
         }
-        ref part flottabilite : DispositifFlottabilite {
+        part flottabilite : DispositifFlottabilite {
             event occurrence gonflageRecu;
             then event occurrence etatFlottEnvoye;
         }
-        ref part station : StationControle {
+        part station : StationControle {
             event occurrence alerteRecue;
             then event occurrence alerteAffichee;
         }
-        ref part telepilote : Telepilote {
+        part telepilote : Telepilote {
             event occurrence alerteVue;
         }
 
@@ -171,25 +175,25 @@ package sequences_adapterImmersion {
         doc /* En mode aquatique, la batterie devient faible : le télépilote
                est alerté et ramène le rover vers la rive la plus proche. */
 
-        ref part energie : GestionEnergie {
+        part energie : GestionEnergie {
             event occurrence niveauEnvoye;
         }
-        ref part controle : UniteControle {
+        part controle : UniteControle {
             event occurrence niveauRecu;
             then event occurrence alerteEnvoyee;
             then event occurrence commandeRecue;
             then event occurrence deplacementEnvoye;
         }
-        ref part propulsion : PropulsionAquatique {
+        part propulsion : PropulsionAquatique {
             event occurrence deplacementRecu;
         }
-        ref part station : StationControle {
+        part station : StationControle {
             event occurrence alerteRecue;
             then event occurrence alerteAffichee;
             then event occurrence commandeRecue;
             then event occurrence commandeEnvoyee;
         }
-        ref part telepilote : Telepilote {
+        part telepilote : Telepilote {
             event occurrence alerteVue;
             then event occurrence commandeEnvoyee;
         }
