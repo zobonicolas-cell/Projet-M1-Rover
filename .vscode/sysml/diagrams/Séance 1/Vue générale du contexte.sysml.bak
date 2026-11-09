@@ -39,11 +39,11 @@ package contexte_ROVLibre {
         part victime : Victime[*];
         part atmosphere : Atmosphere;
 
-        // Échanges d'information avec l'équipe
-        flow commandes of Commande from telepilote to systeme;
-        flow etat of EtatSysteme from systeme to telepilote;
-        flow donnees of DonneesMission from systeme to analyste;
-        flow compteRendu of DonneesMission from systeme to chefEquipe;
+      // Échanges d'information avec l'équipe
+        flow commandes of Commande from telepilote.commandeEmise to systeme.commandeRecue;
+        flow etat of EtatSysteme from systeme.etatEmis to telepilote.etatRecu;
+        flow donnees of DonneesMission from systeme.donneesEmises to analyste.donneesRecues;
+        flow compteRendu of DonneesMission from systeme.compteRenduEmis to chefEquipe.compteRenduRecu;
         connection entretient connect technicien to systeme;
 
         // Interactions avec l'environnement

@@ -1,8 +1,6 @@
 package useCases_ROVLibre {
 
     private import contexte_ROVLibre::definitions::*;
-
-    // Types des acteurs (à supprimer si déjà définis dans contexte_ROVLibre)
     part def Telepilote;
     part def Analyste;
     part def ChefEquipe;
