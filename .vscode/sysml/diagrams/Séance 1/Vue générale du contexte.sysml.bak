@@ -1,61 +1,3 @@
-package contexte_ROVLibre {
-
-    package definitions {
-        // Le système étudié : rover + station de contrôle + relais radio
-        part def ROVLibre;
-
-        // Équipe d'intervention
-        part def Telepilote;
-        part def Analyste;
-        part def ChefEquipe;
-        part def Technicien;
-
-        // Environnement de la mission
-        part def Terrain;
-        part def ZoneInondee;
-        part def Obstacle;
-        part def Victime;
-        part def Atmosphere;      // fumée, poussière, chaleur, obscurité
-
-        // Éléments échangés
-        item def Commande;
-        item def DonneesMission;  // images, mesures, position, cartographie
-        item def EtatSysteme;     // mode terrestre/aquatique, batterie, alertes
-    }
-
-    private import definitions::*;
-
-    part def VueContexteROVLibre {
-        part systeme : ROVLibre;
-
-        part telepilote : Telepilote;
-        part analyste : Analyste;
-        part chefEquipe : ChefEquipe;
-        part technicien : Technicien;
-
-        part terrain : Terrain;
-        part zoneInondee : ZoneInondee[*];
-        part obstacle : Obstacle[*];
-        part victime : Victime[*];
-        part atmosphere : Atmosphere;
-
-      // Échanges d'information avec l'équipe
-        flow commandes of Commande from telepilote.commandeEmise to systeme.commandeRecue;
-        flow etat of EtatSysteme from systeme.etatEmis to telepilote.etatRecu;
-        flow donnees of DonneesMission from systeme.donneesEmises to analyste.donneesRecues;
-        flow compteRendu of DonneesMission from systeme.compteRenduEmis to chefEquipe.compteRenduRecu;
-        connection entretient connect technicien to systeme;
-
-        // Interactions avec l'environnement
-        connection rouleSur connect systeme to terrain;
-        connection flotteSur connect systeme to zoneInondee;    // FI1
-        connection inspecteAuDela connect systeme to obstacle;  // FI2
-        connection detecte connect systeme to victime;
-        connection subit connect systeme to atmosphere;         // FB6
-    }
-}
-
-
 package useCases_ROVLibre {
 
     private import contexte_ROVLibre::definitions::*;
@@ -109,25 +51,4 @@ package useCases_ROVLibre {
     }
 
     use case inspecterDerriereObstacle : CasROVLibre {
-        actor telepilote : Telepilote;
-        actor analyste : Analyste;
-        actor obstacle : Obstacle;
-        objective { doc /* FI2 : déployer un moyen d'observation souple et ultra-fin
-                           dans une fissure pour voir derrière l'obstacle, puis le replier. */ }
-        include transmettreDonnees;
-    }
-
-    // ---- Fin de mission
-    use case recupererRover : CasROVLibre {
-        actor telepilote : Telepilote;
-        actor chefEquipe : ChefEquipe;
-        objective { doc /* Ramener le rover et sauvegarder les données de mission,
-                           même si le rover n'est pas récupéré (phase 8). */ }
-    }
-
-    use case remettreEnEtat : CasROVLibre {
-        actor technicien : Technicien;
-        objective { doc /* Nettoyer, recharger, réarmer la flottabilité et vérifier
-                           le moyen d'observation déporté (phases 9 et 10). */ }
-    }
-}
+        actor telepilote :
